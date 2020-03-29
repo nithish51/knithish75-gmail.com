@@ -1,0 +1,23 @@
+# Increase the value of t i.e. shows  
+                    # how much time a process has been processed  
+                    t = t + rem_bt[i]  
+  
+                    # Waiting time is current time minus  
+                    # time used by this process  
+                    wt[i] = t - bt[i]  
+  
+                    # As the process gets fully executed  
+                    # make its remaining burst time = 0  
+                    rem_bt[i] = 0
+                  
+        # If all processes are done  
+        if (done == True): 
+            break
+              
+# Function to calculate turn around time  
+def findTurnAroundTime(processes, n, bt, wt, tat): 
+      
+    # Calculating turnaround time  
+    for i in range(n): 
+        tat[i] = bt[i] + wt[i]  
+  
