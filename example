@@ -1,0 +1,21 @@
+# Copy the burst time into rt[]  
+    for i in range(n):  
+        rem_bt[i] = bt[i] 
+    t = 0 # Current time  
+  
+    # Keep traversing processes in round  
+    # robin manner until all of them are 
+    # not done.  
+    while(1): 
+        done = True
+  
+        # Traverse all processes one by 
+        # one repeatedly  
+        for i in range(n): 
+              
+            # If burst time of a process is greater  
+            # than 0 then only need to process further  
+            if (rem_bt[i] > 0) : 
+                done = False # There is a pending process 
+                  
+                if (rem_bt[i] > quantum) : 
